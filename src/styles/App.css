@@ -1,6 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap');
+
+*{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 25px;
+    background-color: #f1f5f8;
+}
+
 h1 {
-    color: #27aedb;
     text-align: center;
+    margin: 10px 0;
+    font-size: 2.75rem;
     }
     
 
@@ -9,4 +24,57 @@ button{
     text-align: center;
     justify-content: center;
     align-items: center;
+}
+
+.app__container{
+    max-width: 1300px;
+    margin: auto;
+    /* outline: 1px solid red; */
+}
+
+
+.heading__hr{
+    text-align: center;
+    background-color: #c59d5f;
+    border: none;
+    width: 80px;
+    height: 5px;
+    margin: auto;
+}
+
+.navbar{
+    padding: 40px 20px;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+    gap: 30px;
+    color: #c59d5f;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.dishes__container{
+    padding: 25px;
+    display: grid;
+    gap: 35px 20px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.dish__container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5px;
+}
+
+
+
+@media screen and (max-width: 765px){
+    .dishes__container{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
