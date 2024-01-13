@@ -16,10 +16,10 @@ const App = () => {
   },[dishes])
 
   return (
-    <div className="app__container">
+    <div id="main" className="app__container">
       <h1>Our Menu</h1>
       <hr className="heading__hr"/>
-      <Navbar setDishes={setDishes}/>
+      <Navbar dishes={dishes} setDishes={setDishes}/>
       <DishDisplay dishes={dishes}/>
     </div>
   );

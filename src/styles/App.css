@@ -71,7 +71,15 @@ ul{
     gap: 5px;
 }
 
+.dish__container h1{
+    text-align: start;
+    font-size: 14px;
+    font-weight: bold;
+}
 
+.price{
+    color: #c59d5f;
+}
 
 @media screen and (max-width: 765px){
     .dishes__container{
