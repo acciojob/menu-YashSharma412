@@ -2,11 +2,25 @@ import React from "react";
 // import item_1 from "../images/item_1.jpg";
 
 const DishDisplay = ({ dishes }) => {
+
+  function getTestId(category){
+    switch (category){
+      case "shakes":
+        return "menu-item-shakes";
+      case "lunch":
+        return "menu-item-lunch";
+      case "breakfast":
+        return "menu-item-breakfast";
+      default: 
+        return "";
+    }
+  }
+
   return (
     <div className="dishes__container">
       {
           dishes.map((dish) => (
-            <div className="dish__container" key={dish.id}>
+            <div className="dish__container" key={dish.id} data-test-id={getTestId(dish.category)}>
 
               <div className="dish__img-container">
                 <img src={dish.img} alt={`dish ${dish.id} img`} />
